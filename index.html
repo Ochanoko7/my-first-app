@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#101c35">
+    <title>SKYBOUND — ちいさな冒険</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <main class="page">
+        <header class="page-header">
+            <a class="brand" href="./" aria-label="SKYBOUND ホーム">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                SKYBOUND
+            </a>
+            <span class="edition">A TINY PLATFORM ADVENTURE</span>
+        </header>
+
+        <section class="game-section" aria-labelledby="game-title">
+            <div class="intro">
+                <p class="eyebrow">YOUR NEXT LITTLE ADVENTURE</p>
+                <h1 id="game-title">雲のむこうへ。</h1>
+                <p class="intro-copy">風の吹く丘を越えて、光るかけらを集めよう。</p>
+            </div>
+
+            <div class="game-shell">
+                <div class="game-topbar">
+                    <div class="level-label">
+                        <span class="level-dot" aria-hidden="true"></span>
+                        <span>STAGE 01 <span class="level-divider">/</span> はじまりの丘</span>
+                    </div>
+                    <div class="topbar-right">
+                        <span class="keyboard-hint">移動 <kbd>←</kbd><kbd>→</kbd>　ジャンプ <kbd>Space</kbd></span>
+                        <button class="reset-button" id="reset-button" type="button">↻ <span>リスタート</span></button>
+                    </div>
+                </div>
+
+                <div class="canvas-wrap">
+                    <canvas id="game" width="960" height="540" aria-label="横スクロールアクションゲーム。矢印キーで移動、スペースキーでジャンプ。">
+                        このゲームを遊ぶにはCanvasに対応したブラウザーが必要です。
+                    </canvas>
+                    <div class="game-badge" aria-hidden="true"><span>✦</span> GOOD DAY TO PLAY</div>
+                </div>
+
+                <div class="game-footer">
+                    <p id="game-status" class="game-status" aria-live="polite">矢印キーで冒険をはじめよう</p>
+                    <p class="goal-hint">ゴールの旗を目指そう <span aria-hidden="true">↗</span></p>
+                </div>
+            </div>
+
+            <div class="touch-controls" aria-label="タッチ操作">
+                <div class="direction-controls">
+                    <button class="touch-button" type="button" data-control="left" aria-label="左へ移動">←</button>
+                    <button class="touch-button" type="button" data-control="right" aria-label="右へ移動">→</button>
+                </div>
+                <button class="touch-button jump-button" type="button" data-control="jump" aria-label="ジャンプ">JUMP <span>↑</span></button>
+            </div>
+
+            <div class="feature-row" aria-label="ゲームの遊び方">
+                <div class="feature"><span class="feature-icon gem-icon" aria-hidden="true">◆</span><span><strong>集めよう</strong><small>光るかけらを探そう</small></span></div>
+                <span class="feature-separator" aria-hidden="true"></span>
+                <div class="feature"><span class="feature-icon jump-icon" aria-hidden="true">↗</span><span><strong>飛びこえよう</strong><small>谷やトゲに気をつけて</small></span></div>
+                <span class="feature-separator" aria-hidden="true"></span>
+                <div class="feature"><span class="feature-icon flag-icon" aria-hidden="true">⚑</span><span><strong>たどり着こう</strong><small>丘の先の旗がゴール</small></span></div>
+            </div>
+        </section>
+
+        <footer class="page-footer"><span>TAKE YOUR TIME.</span><span>ONE SMALL STEP AT A TIME <span aria-hidden="true">✦</span></span></footer>
+    </main>
 </body>
 </html>
